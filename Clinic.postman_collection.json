@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "47c7a365-961b-49a6-8ebb-9c39f5b3db43",
+		"name": "Clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31824649"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_TOKEN",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"admin\",\r\n    \"password\": \"shaung\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DEV_API}}/login",
+					"host": [
+						"{{DEV_API}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All pets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|wMVPaXn3T35lqTDHZvfbjeHSfsyv9FTA2rRFplLb67c518b7",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{DEV_API}}/pets",
+					"host": [
+						"{{DEV_API}}"
+					],
+					"path": [
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selected Pet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|wMVPaXn3T35lqTDHZvfbjeHSfsyv9FTA2rRFplLb67c518b7",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{DEV_API}}/pets/2",
+					"host": [
+						"{{DEV_API}}"
+					],
+					"path": [
+						"pets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|wMVPaXn3T35lqTDHZvfbjeHSfsyv9FTA2rRFplLb67c518b7",
+						"type": "text"
+					},
+					{
+						"key": "Accpet",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{DEV_API}}/pets/50",
+					"host": [
+						"{{DEV_API}}"
+					],
+					"path": [
+						"pets",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|wMVPaXn3T35lqTDHZvfbjeHSfsyv9FTA2rRFplLb67c518b7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kelvin\",\r\n    \"status\": \"Bad\",\r\n    \"pawrent\": \"James\",\r\n    \"breed\": \"Beagle\",\r\n    \"gender\": \"Female\",\r\n    \"contact\": \"09251618319\",\r\n    \"address\": \"NO613, Mandalay\",\r\n    \"dob\": \"2024-02-01\",\r\n    \"city\": \"Yangon\",\r\n    \"township\": \"Hlaing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DEV_API}}/pets",
+					"host": [
+						"{{DEV_API}}"
+					],
+					"path": [
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update pet",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|NsfLVLYn3KUnSrq3D3E6YPprvgF2Ao8MQHgHVxH65c642526",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kelvin\",\r\n    \"status\": \"Bad\",\r\n    \"pawrent\": \"James\",\r\n    \"breed\": \"Beagle\",\r\n    \"gender\": \"Female\",\r\n    \"contact\": \"09251618319\",\r\n    \"address\": \"NO613, Mandalay\",\r\n    \"dob\": \"2024-02-01\",\r\n    \"city\": \"Yangon\",\r\n    \"township\": \"Hlaing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DEV_API}}/pets/2",
+					"host": [
+						"{{DEV_API}}"
+					],
+					"path": [
+						"pets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "DEV_API",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
